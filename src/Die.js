@@ -3,11 +3,12 @@ import "./Die.css";
 
 export default class Die extends Component {
   render() {
-    const { diceFace } = this.props;
+    const { diceFace, isRolling, rollDirection } = this.props;
     return (
-      <div className="Die">
-        <i className={`Die-dice fa fa-dice-${diceFace}`} />
-      </div>
+      <i
+        className={`Die fa fa-dice-${diceFace} ${isRolling &&
+          `Die-rolling ${rollDirection}`}`}
+      />
     );
   }
 }

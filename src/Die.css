@@ -1,4 +1,135 @@
-.Die-dice {
+.Die {
   font-size: 200px;
-  color: darkgreen;
+  color: darkmagenta;
 }
+
+/* .Die-rolling {
+  animation: color_change 1000ms infinite alternate;
+} */
+
+.Die-roll-left {
+  animation: spin-left 1000ms linear infinite,
+    color_change 1000ms infinite alternate;
+}
+
+.Die-roll-right {
+  animation: spin-right 1000ms linear infinite,
+    color_change 1000ms infinite alternate;
+}
+
+@keyframes spin-left {
+  from {
+    transform: rotate(-0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes spin-right {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes color_change {
+  0% {
+    color: darkmagenta;
+  }
+  15% {
+    color: darkblue;
+  }
+  30% {
+    color: darkcyan;
+  }
+  45% {
+    color: darkgreen;
+  }
+  60% {
+    color: darkgoldenrod;
+  }
+  75% {
+    color: darkorange;
+  }
+  90% {
+    color: darkred;
+  }
+  100% {
+    color: darkmagenta;
+  }
+}
+
+/* .Die {
+  font-size: 200px;
+  color: darkmagenta;
+}
+
+.Die-rolling {
+  color: blue;
+  animation: color_change 1000ms infinite alternate;
+}
+
+.Die-roll-left {
+  animation: spin-left 1000ms linear infinite;
+}
+
+.Die-roll-right {
+  animation: spin-right 1000ms linear infinite;
+}
+
+@keyframes spin-left {
+  from {
+    transform: rotate(-0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes spin-right {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes color_change {
+  0% {
+    color: darkmagenta;
+  }
+  15% {
+    color: darkblue;
+  }
+  30% {
+    color: darkcyan;
+  }
+  45% {
+    color: darkgreen;
+  }
+  60% {
+    color: darkgoldenrod;
+  }
+  75% {
+    color: darkorange;
+  }
+  90% {
+    color: darkred;
+  }
+  100% {
+    color: darkmagenta;
+  }
+} */
